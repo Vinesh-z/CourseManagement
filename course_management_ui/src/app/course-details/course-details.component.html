@@ -1,0 +1,25 @@
+<div class="ml-5 mt-5">
+    <button type="button " id="addCourse" class="btn btn-primary btn-sm border-0 rounded-0 shadow" routerLink="/add">Add Course</button>
+</div>
+<div class="m-5">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Course ID</th>
+                <th>Course Name</th>
+                <th>Course Duration</th>
+                <th>Course Fee</th>
+                <th>PreRequisite</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let course of courses">
+                <td>{{course.courseId}}</td>
+                <td>{{course.courseName}}</td>
+                <td>{{course.courseDuration}}</td>
+                <td>{{course.courseFee}}</td>
+                <td>{{course.preRequisite}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

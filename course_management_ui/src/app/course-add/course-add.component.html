@@ -1,0 +1,38 @@
+<div class="ml-5 mt-5">
+    <button type="button " id="viewCourse" class="btn btn-primary btn-sm border-0 rounded-0 shadow" routerLink="/">View Courses</button>
+</div>
+<div class="container-fluid mt-5">
+    <div class="card course-card">
+        <form [formGroup]="courseForm" (ngSubmit)="addCourse()">
+            <div class="form-group ml-4 mr-4 mt-4 mb-2 form-group-sm">
+                <label class="small font-weight-bold courseId" for="courseId">Course Id:</label>
+                <input type="text" class="rounded-0 form-control form-control-sm" id="courseId" formControlName="courseId" aria-describedby="courseId" placeholder="Enter the Course ID">
+                <div *ngIf="f.courseId.touched && f.courseId.errors" class="invalid-feedback">Enter Proper Course Id</div>
+            </div>
+            <div class="form-group ml-4 mr-4 mb-2  form-group-sm">
+                <label class="small font-weight-bold courseName" for="courseName">Course Name:</label>
+                <input type="text" class="rounded-0 form-control form-control-sm" id="courseName" formControlName="courseName" aria-describedby="courseName" placeholder="Enter the Course Name">
+                <div *ngIf="f.courseName.touched && f.courseName.errors" class="invalid-feedback">Enter Proper Course Name</div>
+            </div>
+            <div class="form-group ml-4 mr-4  form-group-sm">
+                <label class="small font-weight-bold courseDuration" for="courseDuration">Course Duration:</label>
+                <input type="text" class="rounded-0 form-control form-control-sm" id="courseDuration" formControlName="courseDuration" aria-describedby="courseDuration" placeholder="Enter Course Duration">
+                <div *ngIf="f.courseDuration.touched && f.courseDuration.errors" class="invalid-feedback">Enter Proper Course Duration</div>
+            </div>
+            <div class="form-group ml-4 mr-4  form-group-sm">
+                <label class="small font-weight-bold courseFee" for="courseFee">Course Fee:</label>
+                <input type="text" class="rounded-0 form-control form-control-sm" id="courseFee" formControlName="courseFee" aria-describedby="courseFee" placeholder="Enter Course Fee">
+                <div *ngIf="f.courseFee.touched && f.courseFee.errors" class="invalid-feedback">Enter Proper Course Fee</div>
+            </div>
+            <div class="form-group ml-4 mr-4  form-group-sm">
+                <label class="small font-weight-bold preRequisite" for="preRequisite">Course PreRequisite:</label>
+                <input type="text" class="rounded-0 form-control form-control-sm" id="preRequisite" formControlName="preRequisite" aria-describedby="preRequisite" placeholder="Enter Course PreRequisite">
+                <div *ngIf="f.preRequisite.touched && f.preRequisite.errors" class="invalid-feedback">Enter Proper Course PreRequisite</div>
+            </div>
+            <div class="w-100 align-content-center p-4">
+                <button type="submit " id="Submit" class="btn btn-success btn-sm border-0 rounded-0 shadow w-100" [disabled]="courseForm.invalid ">Submit</button>
+            </div>
+
+        </form>
+    </div>
+</div>
